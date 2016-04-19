@@ -61,7 +61,8 @@ public class MainActivity extends Activity implements OnClickListener, OnGesture
         newBtn.setOnClickListener(this);
         equalsBtn = (ImageButton)findViewById(R.id.equals_btn);
         equalsBtn.setOnClickListener(this);
-
+        runningQ = (EditText)findViewById(R.id.text_field);
+        runningQ.setOnClickListener(this);
 
 
 
@@ -100,8 +101,7 @@ public class MainActivity extends Activity implements OnClickListener, OnGesture
 
 
 
-        runningQ = (EditText)findViewById(R.id.text_field);
-        runningQ.setOnClickListener(this);
+
     }
 
     @Override
