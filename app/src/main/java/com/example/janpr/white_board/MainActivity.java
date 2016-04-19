@@ -61,6 +61,7 @@ public class MainActivity extends Activity implements OnClickListener, OnGesture
         newBtn.setOnClickListener(this);
         equalsBtn = (ImageButton)findViewById(R.id.equals_btn);
         equalsBtn.setOnClickListener(this);
+
         runningQ = (EditText)findViewById(R.id.text_field);
         runningQ.setOnClickListener(this);
 
@@ -306,7 +307,8 @@ public class MainActivity extends Activity implements OnClickListener, OnGesture
                     TextView t = (TextView) findViewById(R.id.text_field);
                     t.setText(t.getText()+"5");
                 }else if (gestureResult.equals("mult1divide") || gestureResult.equals("dividedivide")
-                        ||gestureResult.equals("dividemult1") || gestureResult.equals("-mult1") || gestureResult.equals("mult1-")) {
+                        ||gestureResult.equals("dividemult1") || gestureResult.equals("-mult1") || gestureResult.equals("mult1-")
+                        || gestureResult.equals("mult1mult1")) {
                     TextView t = (TextView) findViewById(R.id.text_field);
                     t.setText(t.getText()+"*");
                 }else if(gestureResult.equals("divide")){
@@ -323,10 +325,10 @@ public class MainActivity extends Activity implements OnClickListener, OnGesture
                     t.setText(t.getText()+"(");
                 }else if(gestureResult.equals("--")){
                     TextView t = (TextView) findViewById(R.id.text_field);
-                    t.setText(t.getText()+"=");
+                    t.setText(t.getText()+"+");
                 }else if(gestureResult.equals("period")) {
                     TextView t = (TextView) findViewById(R.id.text_field);
-                    t.setText(t.getText()+"=");
+                    t.setText(t.getText()+"+");
                 }
 
 
@@ -341,6 +343,8 @@ public class MainActivity extends Activity implements OnClickListener, OnGesture
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

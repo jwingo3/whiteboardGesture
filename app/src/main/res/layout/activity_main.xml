@@ -44,7 +44,7 @@
         android:id="@+id/gestureOverlayView"
         android:layout_gravity="center_horizontal"
         android:eventsInterceptionEnabled="false"
-        android:fadeDuration="1"
+        android:fadeDuration="0"
         android:fadeEnabled="true">
 
         <com.example.janpr.white_board.DrawingView
